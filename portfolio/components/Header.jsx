@@ -2,8 +2,8 @@ import Menu from "./Menu";
 
 export default function Header() {
     return(
-        <header className="header">
-            <h1>e<span>.</span>valencia</h1>
+        <header>
+            <h1 className="mg-pd-0"><a href="#home">e<span>.</span>valencia</a></h1>
             <Menu />
         </header>
     )
