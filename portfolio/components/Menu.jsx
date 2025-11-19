@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function Menu(){
+export default function Menu( ){
     const [menu] = useState(["home", "projects", "contact"]);
 
     return(

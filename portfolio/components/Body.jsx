@@ -1,11 +1,17 @@
 import me from '../assets/my-photo.jpeg';
 import CardProject from './Card-Project';
 import IconsSection from './Icons-Section';
+import Menu from './Menu';
 
-export default function Body(){
+
+export default function Body( {isMobile} ){
+    
     return(
         <main>
             <div className='container'>
+                <section className={`${isMobile? 'menu-open': ''}`} id='menu'>
+                    <Menu />
+                </section>
                 <section className="section" id="home">
                     <div id='home-container'>
                         <div id='welcome'>
