@@ -1,4 +1,5 @@
 import IconsSection from '../components/Icons-Section';
+import Form from './Form';
 
 export default function Footer() {
     return (
@@ -10,24 +11,7 @@ export default function Footer() {
                     <IconsSection />
                     <hr />
                 </div>
-                <form action="POST">
-                    <div className='input-area'>
-                        <label htmlFor="name">Name</label>
-                        <br />
-                        <input id='name' name='name' type="text" />
-                    </div>
-                    <div className='input-area'>
-                        <label htmlFor="email">Email</label>
-                        <br />
-                        <input id='email' name='email' type="email" />
-                    </div>
-                    <div className='input-area'>
-                        <label htmlFor="email">Message</label>
-                        <br />
-                        <textarea name="message" id=""></textarea>
-                    </div>
-                    <input id='send-msg' type="submit" value="Send Message" />
-                </form>
+                <Form />
             </div>
         </footer>
     )

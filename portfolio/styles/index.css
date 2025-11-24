@@ -47,7 +47,7 @@ header a{
   font-weight: bold;
 }
 
-header img{
+.img-menu{
   display: none;
 }
 
@@ -100,7 +100,7 @@ main{
 
 #welcome h1{
   font-size: 4em;
-  margin: 20px 0;
+  margin: 10px 0;
 }
 
 #welcome h2{
@@ -108,14 +108,15 @@ main{
 }
 
 #welcome h3{
-font-size: 1em;
+  font-size: 1em;
   width: 50%;
+  line-height: 1.5;
 }
 
 #icons-section{
   display: flex;
   align-items: center;
-  margin: 10px 0;
+  margin: 20px 0;
 }
 
 .icon{
@@ -243,9 +244,23 @@ hr{
   font-weight: bold;
 }
 
+.error-msg{
+  color: #da0d0d;
+}
+
+@media (min-width: 768px){
+  .img-menu{
+    display: none;
+  }
+}
+
 @media (max-width: 767px){
   header nav{
     display: none;
+  }
+
+  .img-menu{
+    display: block;
   }
   
   #home{
@@ -338,32 +353,6 @@ hr{
       top: 10vh;
     }
   }
-
-  .menu-close{
-    animation: closeMenu .5s forwards;
-  }
-
-  @keyframes closeMenu{
-    0%{
-      top: 10vh;
-    }
-    20%{
-      top: 5vh;
-    }
-    40%{
-      top: 0vh;
-    }
-    60%{
-      top: -5vh;
-    }
-    80%{
-      top: -10vh;
-    }
-    100%{
-      top: -20vh;
-    }
-  }
-
 
   #icons-section{
     width: 100%;
