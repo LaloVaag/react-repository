@@ -2,13 +2,15 @@ import me from '../assets/my-photo.jpeg';
 import CardProject from './Card-Project';
 import IconsSection from './Icons-Section';
 import Menu from './Menu';
+import { Toaster } from 'react-hot-toast';
 
 
 export default function Body( {isMobile} ){
-    
+
     return(
         <main>
             <div className='container'>
+                <Toaster />
                 <section className={`${isMobile? 'menu-open': ''}`} id='menu'>
                     <Menu />
                 </section>

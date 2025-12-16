@@ -1,18 +1,30 @@
-import { useState } from 'react';
+import { useRef } from 'react';
 import { useForm } from 'react-hook-form';
+import toast from 'react-hot-toast';
+import emailjs from '@emailjs/browser';
 
 export default function Form() {
     const { register, handleSubmit, formState: {errors} } = useForm();
-    const [data, setData] = useState();
+
+    const form = useRef();
     
     const onSubmit = (data) => {
-        //setData(JSON.stringify(data));
-        setData(data);
-        console.log(data);
+        if(Object.keys(data).length !== 0){
+            emailjs.send("service_kgu0091", "template_12vbjdt", data, "k_T0vA-Qku3JILK4C")
+            .then( () => {
+                toast.success('Message Sent Successfully!');
+                form.current.reset();
+            })
+            .catch( (error) => {
+                toast.error(`Failed to send message: ${error.text}`);
+            });
+        }else{
+            toast.error("You can't send empty data");
+        }
     };
     
     return(
-        <form onSubmit={handleSubmit(onSubmit)} action="POST">
+        <form ref={form} onSubmit={handleSubmit(onSubmit)}>
             <div className='input-area'>
                 <label htmlFor="name">Name<span style={{color: '#ffffff'}}>*</span></label>
                 <br />

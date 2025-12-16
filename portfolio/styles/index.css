@@ -191,11 +191,9 @@ hr{
 
 #contact-info h1{
   font-size: 5em;
-  margin: 0;
 }
 
 #contact-info p{
-  margin: 0;
   width: 80%;
   font-size: 1.2em;
 }
@@ -311,7 +309,7 @@ hr{
     position: fixed;
     z-index: 20;
     opacity: .95;
-    top: -20vh;
+    top: -30vh;
     border-bottom: 1px solid white;
   }
 
