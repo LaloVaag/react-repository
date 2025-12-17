@@ -1,5 +1,5 @@
 /* import { useRef } from 'react'; */
-import IconsSection from '../components/Icons-Section';
+import IconsSection from './Icons-Section';
 import Form from './Form';
 
 export default function Footer() {
